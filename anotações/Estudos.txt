@@ -1,0 +1,10 @@
+Programação = Lógica de Programação, Algoritmo, Sintaxe;
+    Lógica de Programação 
+      - Pensar em etapas
+      - O que fazer em cada etapa / quais ações executar
+      - Entender o problema e a compreender a solução
+    Algoritmo
+      - É um passo a passo sequencial e lógico afim de se chegar a um objetivo final
+      - Sequência de verficações/validações e ações a serem executados afim de se chegar a um objetivo final
+    Sintaxe
+      - Estudo da sintaxe de php se encontra na pasta codigos_estudo_php
