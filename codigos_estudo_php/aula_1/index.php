@@ -10,13 +10,16 @@
 <body>
 <?php
     echo "blim bom"; /* pelo que eu entendi o php permite usar o front-end dentro do back-end */
+    echo '<br>';
     /*********** VARIÁVEL ***********/
     $name = 'Pedro';        
     /*********** CONSTÂNTE ***********/
     define("sobrenome", "Bueno"); 
     echo $name; /* expected output: Pedro */
+    echo '<br>';
     /*********** CONCATENAÇÃO ***********/
     echo $name." ".sobrenome; /* expected output: Pedro Bueno */
+    echo '<br>';
 
 
     /*********** ARRAY ***********/
@@ -24,14 +27,16 @@
     /* OU */ 
     $frutas2 = array("Abacaxi", "Limão", "Melancia");
     /* OU */
-    $informacao[fruta] = "Abacaxi";
-    $informacao[price] = 3;
+    $informacao['fruta'] = "Abacaxi";
+    $informacao['price'] = 3;
     echo $frutas[0]; /* expected output: Abacaxi */
-    echo $frutas2[1]; /* expected output: Limão */
-    <br> 
-    echo $informacao[fruta]; 
-    <br>
-    $informacao[price];
+    echo '<br>';
+    echo $frutas2[1];/* expected output: Limão */
+    echo '<br>' ;
+    echo $informacao['fruta']; 
+    echo '<br>';
+    echo $informacao['price'];
+    echo '<br>';
     /* expected output:
         Abacaxi
         3
@@ -39,36 +44,41 @@
     
     /*************** FUNÇÕES + CONDIÇÕES + LOOPINGS ***************/
     function checkName ($name){
-        if($name != undefined){
-            echo $name
+        if($name != null){
+            echo $name;
+            echo '<br>';
+        }else{ 
+            echo "tente outra vez";
         };
     };
     checkName('Pedro');
     
     $produtos = ['TV', 'notebook', 'sofá'];
-    foreach($produtos as $key $value){
-        echo $key;
+    foreach($produtos as $key => $value){
         echo "<br>";
-        echo $value;
+        echo $key, ' - ', $value;
         echo '<hr>';
     };
-
-    for($i = 0, $i < 10, $i++){
-        echo "Estou dentro de um loop e vou ser repetido 10x: ".$i
+    
+    for($i = 0; $i < 10; $i++){
+        echo "Estou dentro de um loop e vou ser repetido 10x: ".$i;
+        echo '<br>';
     };
 
     $i = 0;
     while($i < 10){
         $i++;
         echo "estudando";
+        echo '<br>';
     };
 
     /*************** FORMULÁRIO ***************/
-    if(isset($_POST[acao]))
-        echo $_POST[email]
-        echo "<br>"
-        echo $_POST[name]
+    if(isset($_POST['acao'])){
+        echo $_POST['email'], ' ', $_POST['name'];
+        echo '<br>';
+    }
 ?>
+    <p></p>
     <form action="" method="post">
         <input type="email" name="email">
         <input type="text" name="name">
